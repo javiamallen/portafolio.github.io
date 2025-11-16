@@ -1,0 +1,324 @@
+/* --- ESTÉTICA WONDERLUST (NIGHTWISH) --- */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap');
+
+/* --- PALETA DE COLORES ---
+* Fondo Oscuro: #0B0A10 (Casi negro)
+* Texto Principal: #c0c0c0 (Plata suave)
+* Títulos: #E0E0E0 (Blanco épico)
+* Acento Primario (Amatista): #8a4baf
+* Acento Secundario (Luz Estelar): #a9d1ff
+*/
+
+/* --- RESET Y CUERPO --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', 'Segoe UI', sans-serif;
+    background-color: #0B0A10;
+    color: #c0c0c0;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- TIPOGRAFÍA ÉPICA --- */
+h1, h2, h3, h4 {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #E0E0E0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+p {
+    margin-bottom: 15px;
+    color: #c0c0c0;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: transparent;
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid #2a2a33;
+}
+header .logo {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+}
+header .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #a9d1ff; /* Luz Estelar */
+    margin-bottom: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+/* --- SECCIONES DE CONTENIDO --- */
+main section {
+    padding: 60px 0;
+    border-bottom: 1px solid #2a2a33;
+}
+
+/* --- HERO --- */
+.hero {
+    background-color: rgba(0,0,0,0.2);
+    text-align: center;
+}
+.hero h2 {
+    font-size: 2.5rem;
+    color: #a9d1ff; /* Luz Estelar */
+}
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- TÍTULOS DE SECCIÓN --- */
+section h3 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #E0E0E0;
+}
+section p {
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- BOTÓN PERSONALIZADO (CTA) --- */
+.product {
+    text-align: center;
+}
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(145deg, #8a4baf, #5a2a7b); /* Amatista */
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(138, 75, 175, 0.3);
+    transition: all 0.3s ease;
+}
+.cta-button:hover {
+    background: linear-gradient(145deg, #a46dd8, #8a4baf);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(138, 75, 175, 0.5);
+}
+.cta-button .main-text {
+    display: block;
+}
+.cta-button .sub-text {
+    display: block;
+    font-size: 0.8rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    opacity: 0.9;
+    margin-top: 4px;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+/* --- GRID DE HABILIDADES (LA FORJA) --- */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+.skill-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(138, 75, 175, 0.2); /* Sombra Amatista */
+    border-color: #8a4baf;
+}
+.skill-card h4 {
+    font-size: 1.2rem;
+    color: #8a4baf; /* Amatista */
+    margin-bottom: 10px;
+}
+.skill-card p {
+    font-size: 0.95rem;
+    text-align: left;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+/* --- FORMULARIO (SOBREESCRIBIR BOOTSTRAP) --- */
+.form-label {
+    color: #c0c0c0;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+.form-control {
+    background-color: #1a1a20;
+    border: 1px solid #444;
+    color: #fff;
+    border-radius: 5px;
+}
+.form-control:focus {
+    background-color: #1a1a20;
+    color: #fff;
+    border-color: #8a4baf; /* Amatista */
+    box-shadow: 0 0 0 0.25rem rgba(138, 75, 175, 0.25);
+}
+.form-control::placeholder {
+    color: #666;
+}
+.form-control.is-invalid {
+    border-color: #dc3545; /* Rojo de error de Bootstrap */
+}
+.invalid-feedback {
+    color: #dc3545;
+}
+
+/* --- FOOTER --- */
+footer {
+    background-color: #0B0A10;
+    color: #666;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: -1px;
+    border-top: 1px solid #2a2a33;
+}
+footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    font-weight: 300;
+}
+
+/* --- CORAZÓN DE WONDERLUST (ROJO CARMESÍ) --- */
+#heart-symbol {
+    color: #DC3545; /* Crimson Red */
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 1.2rem;
+}
+
+/* --- UTILIDAD DE CÓDIGO --- */
+code {
+    background-color: #2a2a33;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #a9d1ff; /* Luz Estelar */
+}
+
+/* --- ESTILOS PARA EL EJEMPLO DE PROMPT (YAML) --- */
+.prompt-example {
+    background-color: #040405; /* Un negro más profundo, como una consola */
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+.prompt-example h5 {
+    font-family: 'Cinzel', serif;
+    color: #a9d1ff; /* Luz Estelar */
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.prompt-example pre {
+    margin-bottom: 0;
+    white-space: pre-wrap; /* Mantiene el formato */
+    word-wrap: break-word;
+}
+.prompt-example code {
+    font-family: monospace;
+    background: none;
+    color: #c0c0c0; /* Plata */
+    padding: 0;
+    font-size: 0.9rem;
+}
+
+/* Sintaxis YAML de nuestra paleta Wonderlust */
+.prompt-example .yaml-key {
+    color: #8a4baf; /* Amatista (para Claves) */
+}
+.prompt-example .yaml-string {
+    color: #c0c0c0; /* Plata (para Valores) */
+}
+.prompt-example .yaml-comment {
+    color: #6c757d; /* Gris (para Comentarios) */
+    font-style: italic;
+}
+
+/* --- ESTILOS PARA LA CITA DINÁMICA --- */
+.source-content-dynamic .alert-primary {
+    background-color: #1a1a20; /* Dark background */
+    color: #c0c0c0;
+    border: 1px solid #444;
+}
+.source-content-dynamic .blockquote-footer {
+    color: #8a4baf !important; /* Amatista */
+}
+.source-content-dynamic .wiki-card {
+    background-color: #1a1a20; /* Dark background */
+    color: #c0c0c0;
+    border: 1px solid #8a4baf; /* Borde Amatista */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.source-content-dynamic .wiki-card .card-body {
+    padding-bottom: 15px;
+}
+.source-content-dynamic .wiki-card:hover {
+    box-shadow: 0 0 15px rgba(138, 75, 175, 0.5);
+}
+.source-content-dynamic .card-text {
+    font-size: 1.15rem;
+    font-family: 'Cinzel', serif; /* Que la cita sea épica */
+    color: #a9d1ff; /* Luz Estelar */
+    margin-bottom: 0;
+}
+.source-content-dynamic .card-footer {
+    background-color: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.source-content-dynamic .card-footer a {
+    color: #c0c0c0; /* Texto Plata */
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+.source-content-dynamic .card-footer a:hover {
+    text-decoration: underline;
+    color: #E0E0E0;
+}
