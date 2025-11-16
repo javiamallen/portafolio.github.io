@@ -1,324 +1,429 @@
-/* --- ESTÉTICA WONDERLUST (NIGHTWISH) --- */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap');
-
-/* --- PALETA DE COLORES ---
-* Fondo Oscuro: #0B0A10 (Casi negro)
-* Texto Principal: #c0c0c0 (Plata suave)
-* Títulos: #E0E0E0 (Blanco épico)
-* Acento Primario (Amatista): #8a4baf
-* Acento Secundario (Luz Estelar): #a9d1ff
-*/
-
-/* --- RESET Y CUERPO --- */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --primary-color: #8a4baf; /* Deep Lavender */
+    --secondary-color: #e0b0ff; /* Light Lavender */
+    --accent-color: #ffccff; /* Pinkish-Purple Accent */
+    --text-color: #333;
+    --light-text-color: #555;
+    --dark-bg-color: #f0f0f0; /* Soft white background */
+    --card-bg-color: #ffffff; /* Pure white for cards */
+    --border-color: #dcdcdc;
+    --shadow-light: rgba(0, 0, 0, 0.08);
 }
 
 body {
-    font-family: 'Lato', 'Segoe UI', sans-serif;
-    background-color: #0B0A10;
-    color: #c0c0c0;
-    line-height: 1.7;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--dark-bg-color); /* Updated to soft white */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #a060d0;
+    text-decoration: underline;
 }
 
 .container {
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 1.5rem;
 }
 
-/* --- TIPOGRAFÍA ÉPICA --- */
-h1, h2, h3, h4 {
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: #E0E0E0;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-p {
-    margin-bottom: 15px;
-    color: #c0c0c0;
-    font-size: 1.1rem;
-    font-weight: 300;
-}
-
-/* --- HEADER --- */
+/* Header Styles */
 header {
-    background-color: transparent;
-    padding: 30px 0;
-    text-align: center;
-    border-bottom: 1px solid #2a2a33;
-}
-header .logo {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #a060d0 100%);
     color: #fff;
-    font-size: 2.8rem;
-    margin-bottom: 5px;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--shadow-light);
 }
+
+header .logo {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
 header .subtitle {
     font-size: 1.2rem;
-    font-weight: 300;
-    color: #a9d1ff; /* Luz Estelar */
-    margin-bottom: 0;
-    font-family: 'Lato', sans-serif;
+    color: var(--accent-color);
+    margin-top: -0.5rem;
 }
 
-/* --- SECCIONES DE CONTENIDO --- */
-main section {
-    padding: 60px 0;
-    border-bottom: 1px solid #2a2a33;
-}
-
-/* --- HERO --- */
+/* Hero Section */
 .hero {
-    background-color: rgba(0,0,0,0.2);
+    background-color: var(--card-bg-color); /* White background for hero */
+    padding: 4rem 0;
     text-align: center;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-light);
+    margin-bottom: 2rem;
 }
+
 .hero h2 {
     font-size: 2.5rem;
-    color: #a9d1ff; /* Luz Estelar */
+    color: var(--primary-color);
 }
+
 .hero p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: 0 auto;
+    font-size: 1.15rem;
+    max-width: 800px;
+    margin: 1rem auto;
+    color: var(--light-text-color);
 }
 
-/* --- TÍTULOS DE SECCIÓN --- */
-section h3 {
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #E0E0E0;
-}
-section p {
-    text-align: center;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+/* Projects Section */
+.projects {
+    padding: 3rem 0;
+    background-color: var(--dark-bg-color);
 }
 
-/* --- BOTÓN PERSONALIZADO (CTA) --- */
-.product {
+.projects h3 {
     text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
 }
-.cta-button {
-    display: inline-block;
-    background: linear-gradient(145deg, #8a4baf, #5a2a7b); /* Amatista */
-    color: #fff;
-    padding: 14px 28px;
-    border-radius: 8px;
+
+.project-card-link {
     text-decoration: none;
-    font-family: 'Cinzel', serif;
-    font-weight: 700;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    border: none;
-    box-shadow: 0 4px 15px rgba(138, 75, 175, 0.3);
-    transition: all 0.3s ease;
-}
-.cta-button:hover {
-    background: linear-gradient(145deg, #a46dd8, #8a4baf);
-    color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(138, 75, 175, 0.5);
-}
-.cta-button .main-text {
+    color: inherit;
     display: block;
-}
-.cta-button .sub-text {
-    display: block;
-    font-size: 0.8rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    opacity: 0.9;
-    margin-top: 4px;
-    text-transform: none;
-    letter-spacing: normal;
+    height: 100%;
 }
 
-/* --- GRID DE HABILIDADES (LA FORJA) --- */
+.project-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.project-card .card-title {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-card .card-text {
+    color: var(--light-text-color);
+    font-size: 0.95rem;
+}
+
+.project-card .card-footer {
+    background-color: var(--secondary-color);
+    border-top: 1px solid var(--border-color);
+    color: #fff;
+    font-weight: bold;
+    text-align: right;
+    padding: 0.75rem 1.25rem;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.project-card:hover .card-footer {
+    background-color: var(--primary-color);
+}
+
+.project-card .badge {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    padding: 0.4em 0.7em;
+    border-radius: 0.25rem;
+}
+
+.project-card .badge.text-bg-primary {
+    background-color: var(--primary-color) !important;
+    color: #fff;
+}
+.project-card .badge.text-bg-secondary {
+    background-color: #ccc !important;
+    color: var(--text-color);
+}
+.project-card .badge.text-bg-light {
+    background-color: #f0f0f0 !important;
+    color: var(--light-text-color);
+}
+
+/* Coming Soon Card Specifics */
+.project-card.coming-soon {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background-color: #f8f8f8;
+}
+
+.project-card.coming-soon:hover {
+    transform: none;
+    box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+.project-card.coming-soon .card-footer {
+    background-color: #e9ecef;
+    color: var(--light-text-color);
+    cursor: not-allowed;
+}
+
+/* Process Section (Skills Grid) */
+.process {
+    background-color: var(--card-bg-color); /* White background for process */
+    padding: 3rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-light);
+    margin-bottom: 2rem;
+}
+
+.process h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
+
 .skill-card {
-    background-color: rgba(255, 255, 255, 0.03);
-    border: 1px solid #333;
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
     border-radius: 8px;
-    padding: 25px;
-    transition: all 0.3s ease;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--shadow-light);
+    transition: box-shadow 0.3s ease;
 }
+
 .skill-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 20px rgba(138, 75, 175, 0.2); /* Sombra Amatista */
-    border-color: #8a4baf;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 .skill-card h4 {
+    color: var(--primary-color);
     font-size: 1.2rem;
-    color: #8a4baf; /* Amatista */
-    margin-bottom: 10px;
+    margin-bottom: 0.75rem;
 }
+
 .skill-card p {
-    font-size: 0.95rem;
-    text-align: left;
-    margin-bottom: 0;
-    font-weight: 300;
-}
-
-/* --- FORMULARIO (SOBREESCRIBIR BOOTSTRAP) --- */
-.form-label {
-    color: #c0c0c0;
-    font-family: 'Cinzel', serif;
     font-size: 0.9rem;
-    text-transform: uppercase;
-}
-.form-control {
-    background-color: #1a1a20;
-    border: 1px solid #444;
-    color: #fff;
-    border-radius: 5px;
-}
-.form-control:focus {
-    background-color: #1a1a20;
-    color: #fff;
-    border-color: #8a4baf; /* Amatista */
-    box-shadow: 0 0 0 0.25rem rgba(138, 75, 175, 0.25);
-}
-.form-control::placeholder {
-    color: #666;
-}
-.form-control.is-invalid {
-    border-color: #dc3545; /* Rojo de error de Bootstrap */
-}
-.invalid-feedback {
-    color: #dc3545;
+    color: var(--light-text-color);
 }
 
-/* --- FOOTER --- */
-footer {
-    background-color: #0B0A10;
-    color: #666;
+/* Contact Section */
+.contact {
+    padding: 3rem 0;
+    background-color: var(--dark-bg-color);
     text-align: center;
-    padding: 30px 0;
-    margin-top: -1px;
-    border-top: 1px solid #2a2a33;
-}
-footer p {
-    font-size: 0.9rem;
-    margin-bottom: 0;
-    font-weight: 300;
 }
 
-/* --- CORAZÓN DE WONDERLUST (ROJO CARMESÍ) --- */
-#heart-symbol {
-    color: #DC3545; /* Crimson Red */
-    margin-left: 3px;
-    margin-right: 3px;
-    font-size: 1.2rem;
+.contact h3 {
+    margin-bottom: 2rem;
+    color: var(--primary-color);
 }
 
-/* --- UTILIDAD DE CÓDIGO --- */
-code {
-    background-color: #2a2a33;
-    padding: 3px 6px;
-    border-radius: 4px;
-    font-family: monospace;
-    color: #a9d1ff; /* Luz Estelar */
-}
-
-/* --- ESTILOS PARA EL EJEMPLO DE PROMPT (YAML) --- */
-.prompt-example {
-    background-color: #040405; /* Un negro más profundo, como una consola */
-    border: 1px solid #444;
-    border-radius: 8px;
-    padding: 25px;
-    margin-top: 30px;
-    text-align: left;
+.contact p {
     max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-}
-.prompt-example h5 {
-    font-family: 'Cinzel', serif;
-    color: #a9d1ff; /* Luz Estelar */
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    border-bottom: 1px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
-.prompt-example pre {
-    margin-bottom: 0;
-    white-space: pre-wrap; /* Mantiene el formato */
-    word-wrap: break-word;
-}
-.prompt-example code {
-    font-family: monospace;
-    background: none;
-    color: #c0c0c0; /* Plata */
-    padding: 0;
-    font-size: 0.9rem;
+    margin: 0 auto 2rem auto;
+    color: var(--light-text-color);
 }
 
-/* Sintaxis YAML de nuestra paleta Wonderlust */
-.prompt-example .yaml-key {
-    color: #8a4baf; /* Amatista (para Claves) */
-}
-.prompt-example .yaml-string {
-    color: #c0c0c0; /* Plata (para Valores) */
-}
-.prompt-example .yaml-comment {
-    color: #6c757d; /* Gris (para Comentarios) */
-    font-style: italic;
+.contact form {
+    background-color: var(--card-bg-color);
+    padding: 2.5rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 15px var(--shadow-light);
 }
 
-/* --- ESTILOS PARA LA CITA DINÁMICA --- */
-.source-content-dynamic .alert-primary {
-    background-color: #1a1a20; /* Dark background */
-    color: #c0c0c0;
-    border: 1px solid #444;
+.contact .form-label {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
-.source-content-dynamic .blockquote-footer {
-    color: #8a4baf !important; /* Amatista */
+
+.contact .form-control:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(138, 75, 175, 0.25); /* Primary color with opacity */
 }
-.source-content-dynamic .wiki-card {
-    background-color: #1a1a20; /* Dark background */
-    color: #c0c0c0;
-    border: 1px solid #8a4baf; /* Borde Amatista */
-    border-radius: 8px;
-    transition: all 0.3s ease;
-}
-.source-content-dynamic .wiki-card .card-body {
-    padding-bottom: 15px;
-}
-.source-content-dynamic .wiki-card:hover {
-    box-shadow: 0 0 15px rgba(138, 75, 175, 0.5);
-}
-.source-content-dynamic .card-text {
-    font-size: 1.15rem;
-    font-family: 'Cinzel', serif; /* Que la cita sea épica */
-    color: #a9d1ff; /* Luz Estelar */
-    margin-bottom: 0;
-}
-.source-content-dynamic .card-footer {
-    background-color: transparent;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-.source-content-dynamic .card-footer a {
-    color: #c0c0c0; /* Texto Plata */
+
+
+/* Call to Action Button */
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
     text-decoration: none;
-    font-size: 0.9rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
 }
-.source-content-dynamic .card-footer a:hover {
-    text-decoration: underline;
-    color: #E0E0E0;
+
+.cta-button:hover {
+    background-color: #a060d0; /* Slightly lighter primary */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    color: #fff; /* Ensure text remains white on hover */
+}
+
+.cta-button .main-text {
+    display: block;
+}
+
+.cta-button .sub-text {
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0.8;
+    margin-top: 0.2rem;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    margin-top: auto; /* Pushes footer to the bottom */
+    box-shadow: 0 -4px 8px var(--shadow-light);
+}
+
+footer #heart-symbol {
+    color: var(--accent-color);
+    margin: 0 5px;
+}
+
+/* Specific styles for prompt-engineering-case-study1.html */
+.challenge-details {
+    padding: 3rem 0;
+    background-color: var(--card-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px var(--shadow-light);
+    margin-bottom: 2rem;
+}
+
+.challenge-details h3 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.challenge-points {
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem auto;
+    box-shadow: 0 2px 8px var(--shadow-light);
+}
+
+.challenge-points h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    border-bottom: 1px dashed var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+.challenge-points ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.challenge-points ul li {
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    color: var(--light-text-color);
+}
+
+.challenge-points ul li strong {
+    color: var(--primary-color);
+}
+
+.prompt-example {
+    background-color: #282c34; /* Dark background for code */
+    color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow-x: auto; /* For mobile scroll */
+}
+
+.prompt-example h5 {
+    color: #61dafb; /* Light blue for heading */
+    margin-bottom: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+}
+
+.prompt-example pre {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    color: #f8f8f2;
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* YAML Syntax Highlighting */
+.prompt-example .yaml-comment { color: #888; } /* Gray comments */
+.prompt-example .yaml-key { color: #e0b0ff; } /* Light purple for keys */
+.prompt-example .yaml-string { color: #a060d0; } /* Deeper purple for strings */
+.prompt-example .yaml-number { color: #f99; } /* Reddish for numbers */
+.prompt-example .yaml-operator { color: #61dafb; } /* Blue for operators like --- */
+
+/* Quote container for JS */
+#wiki-quote-container {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px var(--shadow-light);
+    font-style: italic;
+    color: var(--light-text-color);
+}
+
+#wiki-quote-container .alert {
+    margin-bottom: 0;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border: 1px solid var(--border-color);
+    color: var(--light-text-color);
 }
